@@ -1,0 +1,26 @@
+.container {
+  @apply flex flex-col justify-between items-center lg:w-64 lg:h-72 w-48 h-56 p-2 rounded-lg backdrop-blur-sm border-2 absolute  opacity-100;
+  transition: opacity 0.5s;
+}
+.hiden {
+  @apply opacity-0;
+  transform: translate(0, 500%);
+
+  /* @apply hidden; */
+}
+.title {
+  @apply text-white font-bold py-1;
+}
+.close {
+  @apply absolute top-2 right-2 text-white hover:text-yellow-500 cursor-pointer;
+}
+.icon {
+  @apply w-[3.5vh] h-[3.5vh] text-white cursor-pointer;
+}
+
+.isOpen {
+  @apply text-yellow-500;
+}
+.isClose {
+  @apply text-white;
+}

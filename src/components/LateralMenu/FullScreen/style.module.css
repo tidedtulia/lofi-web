@@ -1,0 +1,9 @@
+.button {
+  @apply w-[4vh] h-[4vh] flex justify-center items-center rounded-md bg-transparent backdrop-blur-3xl cursor-pointer fixed top-[1vh] right-[5vh] border;
+}
+.icon {
+  @apply w-[3.5vh] h-[3.5vh] text-white;
+}
+.fullScreen {
+  @apply w-full h-full;
+}

@@ -1,0 +1,16 @@
+.button {
+  @apply bg-transparent text-[rgba(255,255,255,.8)] cursor-pointer;
+}
+.button_title {
+  @apply font-bold ml-2 lg:text-xl text-base;
+}
+.with_text {
+  @apply bg-[rgba(255,255,255,.1)] py-1 px-2 rounded-xl leading-9 flex flex-row justify-between items-center;
+}
+.with_text .icon {
+  @apply lg:w-6 lg:h-6 w-4 h-4;
+}
+
+.icon {
+  @apply lg:w-10 lg:h-10 w-8 h-8;
+}

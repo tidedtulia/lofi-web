@@ -1,0 +1,19 @@
+.container {
+  @apply flex flex-col items-center bg-transparent rounded-md w-auto;
+}
+.control {
+  @apply flex flex-row justify-between items-center;
+}
+.button {
+  @apply w-[4vh] h-[4vh] flex justify-center items-center bg-transparent cursor-pointer;
+}
+.icon {
+  @apply w-[3.5vh] h-[3.5vh] text-white;
+}
+.volume {
+  @apply p-[1vh] absolute bottom-[4vh] bg-transparent backdrop-blur-sm border border-white rounded-md flex items-center justify-center;
+}
+
+.closeVolumn {
+  @apply hidden;
+}

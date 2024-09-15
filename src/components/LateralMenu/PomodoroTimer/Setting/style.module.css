@@ -1,0 +1,22 @@
+/*--------Setting----------------*/
+.setting_container {
+  @apply w-full h-full flex flex-col justify-evenly items-center;
+}
+.label {
+  @apply block mb-1 mt-2 font-bold text-white;
+}
+.slider {
+  @apply w-[50%] my-0 lg:h-10 h-7 border-2 border-solid border-red-500 rounded-3xl;
+}
+.green {
+  @apply border-2 border-solid border-green-500;
+}
+.thumb {
+  @apply bg-red-500 cursor-pointer lg:w-9 lg:h-9 w-6 h-6 rounded-full;
+}
+.green .thumb {
+  @apply bg-green-500;
+}
+.track {
+  @apply bg-white;
+}

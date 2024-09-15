@@ -1,0 +1,10 @@
+/*---------------Timer--------------*/
+.timer_container {
+  @apply w-full h-full flex flex-col justify-between items-center;
+}
+.CircularProgressbar {
+  @apply w-full;
+}
+.timer_buttons {
+  @apply w-[30%] flex flex-row justify-center items-center;
+}

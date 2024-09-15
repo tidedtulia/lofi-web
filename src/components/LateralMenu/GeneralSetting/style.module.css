@@ -1,0 +1,70 @@
+.icon {
+  @apply w-[3.5vh] h-[3.5vh] text-white cursor-pointer;
+}
+.isClose {
+  @apply text-white;
+}
+.title .isClose {
+  @apply text-white;
+}
+
+.container {
+  @apply w-[20vw] p-[1vw] absolute bottom-[4vh] rounded-lg backdrop-blur-sm border-2 flex flex-col items-end justify-between text-white font-bold opacity-100 lg:gap-2;
+  transition: opacity 0.5s;
+  font-size: 2vh;
+}
+.hiden {
+  @apply opacity-0 z-[-1] pointer-events-none;
+  /* transform: translate(500%, 0); */
+  /* @apply hidden; */
+}
+.title {
+  @apply w-full text-center;
+  font-size: 2vh;
+}
+.hide_element {
+  @apply w-full flex flex-row justify-between items-center;
+  font-size: 2vh;
+}
+
+.toogle {
+  @apply w-[8vh] h-[4vh] rounded-full flex items-center justify-between transition-all duration-500;
+}
+.toogle_true {
+  @apply bg-yellow-400;
+}
+.toogle_false {
+  @apply bg-[rgba(0,0,0,0.3)];
+}
+.toogle_button {
+  @apply w-[4vh] h-[4vh] bg-white rounded-full transition-all duration-500 cursor-pointer;
+}
+.toogle_button_true {
+  @apply ml-[4vh];
+}
+.toogle_button_false {
+  @apply mr-[4vh];
+}
+.comment {
+  @apply text-xs font-thin lg:leading-6 leading-3;
+  font-size: 2vh;
+}
+.hire_after {
+  @apply w-full flex flex-row justify-between items-center;
+}
+.hire_after_title {
+  @apply w-[50%];
+  font-size: 2vh;
+}
+.hire_after_number {
+  @apply w-[50%] flex flex-row justify-evenly items-center;
+  font-size: 2vh;
+}
+.hire_after_input {
+  @apply w-[30%]  outline-none bg-none text-yellow-500 bg-transparent;
+  font-size: 2vh;
+}
+.hire_after_number p {
+  @apply w-[50%] text-yellow-500;
+  font-size: 2vh;
+}

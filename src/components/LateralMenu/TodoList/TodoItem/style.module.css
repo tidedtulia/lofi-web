@@ -1,0 +1,12 @@
+.todoItem {
+  @apply w-full flex flex-row justify-between items-center mb-2;
+}
+.todoItem_text {
+  @apply text-yellow-500 font-bold lg:text-sm text-xs;
+}
+.todoItem_text_check {
+  @apply text-white line-through;
+}
+.todoItem_delete {
+  @apply text-white font-bold lg:text-base text-sm;
+}

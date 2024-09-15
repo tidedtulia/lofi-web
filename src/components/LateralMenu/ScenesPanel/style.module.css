@@ -1,0 +1,35 @@
+.icon {
+  @apply w-[3.5vh] h-[3.5vh] text-white cursor-pointer;
+}
+.isOpen {
+  @apply text-yellow-500;
+}
+.isClose {
+  @apply text-white;
+}
+
+.container {
+  @apply w-[15vw] h-[15vh] gap-1 flex flex-col items-stretch absolute lg:left-[50vw] left-[53vw] bottom-[5vh] rounded-lg bg-transparent backdrop-blur-sm border-2 opacity-100 cursor-pointer overflow-x-hidden overflow-y-scroll;
+  transition: opacity 0.5s;
+}
+.container::-webkit-scrollbar {
+  display: none;
+  background-color: transparent;
+}
+.hiden {
+  @apply opacity-0 z-[-1] pointer-events-none;
+  /* transform: translate(500%, 0); */
+
+  /* @apply hidden; */
+}
+.item {
+  @apply h-fit w-fit relative cursor-pointer rounded-lg;
+}
+.title {
+  @apply w-fit h-fit px-[1vw] text-[#2877e5] rounded-xl lg:text-xl text-base font-bold absolute top-0 bottom-0 left-0 right-0 m-auto bg-blue-100 backdrop-blur-[20px];
+  font-size: 2vh;
+  -webkit-text-stroke: 1px rgba(71, 85, 105);
+}
+.img {
+  @apply h-auto w-[15vw] rounded-lg;
+}

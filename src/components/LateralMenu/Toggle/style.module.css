@@ -1,0 +1,19 @@
+.container {
+  @apply w-[7vh] h-[3.5vh] rounded-full flex items-center justify-between transition-all duration-500;
+}
+.button {
+  @apply w-[3.5vh] h-[3.5vh] bg-white rounded-full transition-all duration-500  flex flex-row justify-center items-center;
+}
+
+.container_day {
+  @apply bg-yellow-400;
+}
+.container_night {
+  @apply bg-[rgba(0,0,0,0.3)];
+}
+.button_day {
+  @apply mr-[3.5vh];
+}
+.button_night {
+  @apply ml-[3.5vh];
+}
