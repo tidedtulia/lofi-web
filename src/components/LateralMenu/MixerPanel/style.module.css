@@ -48,9 +48,15 @@
 .mood_active .mood_menu_item_title {
   @apply text-yellow-300;
 }
+
 .icon_type {
-  @apply w-4 h-4 lg:w-6 lg:h-6;
+  @apply w-4 h-4 lg:w-6 lg:h-6 text-black;
 }
+
+.mood_active .icon_type {
+  @apply text-yellow-300;
+}
+
 /* Music volume */
 .music_volume {
   @apply w-full h-1/5 py-1 lg:py-2 flex flex-col justify-between items-center rounded-lg backdrop-blur-[10px] border-2;
