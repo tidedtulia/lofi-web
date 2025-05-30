@@ -319,6 +319,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                     id="Layer_1"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
+                    className={style.icon_type}
                   >
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g
