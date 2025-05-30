@@ -313,19 +313,17 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <div className={style.mood_menu_bg_icon}>
                   <svg
                     fill="currentColor"
-                    height="20px"
-                    width="20px"
                     version="1.1"
                     id="Layer_1"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     className={style.icon_type}
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g
                       id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></g>
                     <g id="SVGRepo_iconCarrier">
                       {" "}
