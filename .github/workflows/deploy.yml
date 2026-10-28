@@ -35,9 +35,6 @@ jobs:
           build-args: |
             NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
             NEXT_PUBLIC_CLOUDINARY_API_KEY=${{ secrets.NEXT_PUBLIC_CLOUDINARY_API_KEY }}
-            NEXT_PUBLIC_TYPE_1=${{ secrets.NEXT_PUBLIC_TYPE_1 }}
-            NEXT_PUBLIC_TYPE_2=${{ secrets.NEXT_PUBLIC_TYPE_2 }}
-            NEXT_PUBLIC_TYPE_3=${{ secrets.NEXT_PUBLIC_TYPE_3 }}
 
       - name: Log in to Azure
         uses: azure/login@v1

@@ -19,9 +19,6 @@ Requires a `.env.local` file with:
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
 NEXT_PUBLIC_CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
-NEXT_PUBLIC_TYPE_1=   # count of music tracks in playlist type 1
-NEXT_PUBLIC_TYPE_2=   # count of music tracks in playlist type 2
-NEXT_PUBLIC_TYPE_3=   # count of music tracks in playlist type 3
 ```
 
 ## Related project

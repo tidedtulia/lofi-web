@@ -1,13 +1,6 @@
 import { PLACE, SCENE, SOUND, TIME, WEATHER } from "./enums";
 import { concateString } from "./utils";
 
-//------------const -1
-export const TYPE_1: number = Number.parseInt(process.env.NEXT_PUBLIC_TYPE_1!);
-export const TYPE_2: number = Number.parseInt(process.env.NEXT_PUBLIC_TYPE_2!);
-export const TYPE_3: number = Number.parseInt(process.env.NEXT_PUBLIC_TYPE_3!);
-export const MAX: number = Math.max(TYPE_1, TYPE_2, TYPE_3) + 1;
-export const MIN: number = Math.min(TYPE_1, TYPE_2, TYPE_3);
-
 export const PLAY_PAUSE: string =
   "M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z";
 export const PLAY: string =

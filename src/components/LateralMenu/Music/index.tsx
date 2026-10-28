@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { changeNumMusic } from "@/store/slices/music.slice";
 import { changeVolumeAudio } from "@/store/slices/sound.slice";
-import { PLAY, PLAY_PAUSE, TYPE_1, TYPE_2, TYPE_3 } from "@/utils/files";
+import { PLAY, PLAY_PAUSE } from "@/utils/files";
 
 import style from "./style.module.css";
 export interface IMusicProps {}
@@ -19,7 +19,7 @@ function Music() {
     icon: PLAY,
   });
 
-  const { type, num, src } = useSelector((state: RootState) => state.music);
+  const { num, src, listMusic } = useSelector((state: RootState) => state.music);
   const { audio } = useSelector((state: RootState) => state.sound);
   const volume = useSelector((state: RootState) => state.sound.audio);
 
@@ -62,49 +62,15 @@ function Music() {
     }
   };
 
+  const lastIndex = listMusic.length - 1;
+
   const handleNext = () => {
-    if (type == 1) {
-      if (num == TYPE_1) {
-        dispatch(changeNumMusic(0));
-      } else {
-        dispatch(changeNumMusic(num + 1));
-      }
-    } else if (type == 2) {
-      if (num == TYPE_2) {
-        dispatch(changeNumMusic(0));
-      } else {
-        dispatch(changeNumMusic(num + 1));
-      }
-    } else if (type == 3) {
-      if (num == TYPE_3) {
-        dispatch(changeNumMusic(0));
-      } else {
-        dispatch(changeNumMusic(num + 1));
-      }
-    }
+    dispatch(changeNumMusic(num === lastIndex ? 0 : num + 1));
     setIsPlaying({ isPlay: true, icon: PLAY_PAUSE });
   };
 
   const handlePrev = () => {
-    if (type == 1) {
-      if (num == 0) {
-        dispatch(changeNumMusic(TYPE_1));
-      } else {
-        dispatch(changeNumMusic(num - 1));
-      }
-    } else if (type == 2) {
-      if (num == 0) {
-        dispatch(changeNumMusic(TYPE_2));
-      } else {
-        dispatch(changeNumMusic(num - 1));
-      }
-    } else if (type == 3) {
-      if (num == 0) {
-        dispatch(changeNumMusic(TYPE_3));
-      } else {
-        dispatch(changeNumMusic(num - 1));
-      }
-    }
+    dispatch(changeNumMusic(num === 0 ? lastIndex : num - 1));
     setIsPlaying({ isPlay: true, icon: PLAY_PAUSE });
   };
 

@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { MAX, MIN } from "@/utils/files";
 import { Music } from "@/utils/interface";
 
 interface MusicSlice {
@@ -12,7 +11,7 @@ interface MusicSlice {
 
 const initialState: MusicSlice = {
   type: 1,
-  num: Math.floor(Math.random() * MAX),
+  num: 0,
   src: "",
   listMusic: [],
 };
@@ -35,7 +34,7 @@ const musicSlice = createSlice({
     },
     changeType: (state, action: PayloadAction<number>) => {
       state.type = action.payload;
-      state.num = Math.floor(Math.random() * MIN);
+      state.num = 0;
     },
   },
 });

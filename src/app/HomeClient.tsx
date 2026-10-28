@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Controller from "@/components/Controller";
 import Video from "@/components/Video";
 import { RootState } from "@/store";
-import { setListMusic, setSrc } from "@/store/slices/music.slice";
+import { changeNumMusic, setListMusic } from "@/store/slices/music.slice";
 import { loading_logo, rotate_logo } from "@/utils/files";
 import { Music } from "@/utils/interface";
 
@@ -46,8 +46,9 @@ export default function HomeClient() {
         getListMusic();
       } else {
         if (!!data) {
+          const randomNum = Math.floor(Math.random() * data.length);
           dispatch(setListMusic(data));
-          dispatch(setSrc(data[num].src));
+          dispatch(changeNumMusic(randomNum));
         }
       }
     };

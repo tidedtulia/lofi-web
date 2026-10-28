@@ -1,8 +1,9 @@
 import cloudinary from "cloudinary";
 import { NextRequest, NextResponse } from "next/server";
 
-import { MAX } from "@/utils/files";
 import { Music } from "@/utils/interface";
+
+const MAX_RESULTS = 500;
 
 cloudinary.v2.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -21,7 +22,7 @@ export async function GET(req: NextRequest) {
     flags: "lossy",
     format: "mp3",
     prefix: folder,
-    max_results: MAX,
+    max_results: MAX_RESULTS,
   });
 
   if (resources) {
