@@ -1,19 +1,18 @@
 import * as React from "react";
-import Button from "@/components/Button";
-import {
-  changeVolumeRain,
-  openButtonRain,
-  closeButtonRain,
-  changeVolumeKeyboard,
-  openButtonKeyboard,
-  closeButtonKeyboard,
-} from "@/store/slices/sound.slice";
-
-import { changeLocation, changeWeather } from "@/store/slices/case.slice";
 import { useDispatch, useSelector } from "react-redux";
 
+import Button from "@/components/Button";
 import { RootState } from "@/store";
-import { PLACE, SCENE, WEATHER } from "@/utils/enums";
+import { changeLocation, changeWeather } from "@/store/slices/case.slice";
+import {
+  changeVolumeKeyboard,
+  changeVolumeRain,
+  closeButtonKeyboard,
+  closeButtonRain,
+  openButtonKeyboard,
+  openButtonRain,
+} from "@/store/slices/sound.slice";
+import { PLACE, WEATHER } from "@/utils/enums";
 export interface IControllerIntheWoodsInSideProps {}
 
 export default function ControllerIntheWoodsInSide(

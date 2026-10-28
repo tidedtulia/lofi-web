@@ -1,11 +1,13 @@
+import { CldImage } from "next-cloudinary";
 import * as React from "react";
-import style from "./style.module.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import { RootState } from "@/store";
 import { changeScene } from "@/store/slices/case.slice";
 import { SCENE } from "@/utils/enums";
-import { CldImage } from "next-cloudinary";
 import { SCENE_FILE } from "@/utils/files";
+
+import style from "./style.module.css";
 
 export interface IScenesPanelProps {}
 

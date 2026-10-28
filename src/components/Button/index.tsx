@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import style from "./style.module.css";
 export interface IButtonProps {
   title: string;
@@ -6,7 +7,7 @@ export interface IButtonProps {
   state?: boolean;
   action: () => void;
   volume?: number;
-  changeVolumeSound?: (param: React.ChangeEvent<HTMLInputElement>) => void;
+  changeVolumeSound?: (_e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function Button(props: IButtonProps) {

@@ -1,4 +1,8 @@
+import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import Button from "@/components/Button";
+import { RootState } from "@/store";
 import { changeLocation, changeWeather } from "@/store/slices/case.slice";
 import {
   changeVolumeRain,
@@ -8,10 +12,7 @@ import {
   openButtonRain,
   openButtonTraffic,
 } from "@/store/slices/sound.slice";
-import { RootState } from "@/store";
 import { PLACE, WEATHER } from "@/utils/enums";
-import * as React from "react";
-import { useDispatch, useSelector } from "react-redux";
 
 export interface IOutsideProps {}
 

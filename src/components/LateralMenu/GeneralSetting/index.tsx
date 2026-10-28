@@ -1,8 +1,10 @@
 import * as React from "react";
-import style from "./style.module.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import { RootState } from "@/store";
 import { changeHide, changeTime } from "@/store/slices/hide.slice";
+
+import style from "./style.module.css";
 
 export interface IGeneralSettingProps {}
 

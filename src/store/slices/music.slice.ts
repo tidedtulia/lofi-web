@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Music } from "@/utils/interface";
+
 import { MAX, MIN } from "@/utils/files";
+import { Music } from "@/utils/interface";
 
 interface MusicSlice {
   type: number;

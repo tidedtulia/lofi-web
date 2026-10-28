@@ -1,13 +1,15 @@
 import * as React from "react";
-import style from "./style.module.css";
-import ReactSlider from "react-slider";
 import { useDispatch, useSelector } from "react-redux";
+import ReactSlider from "react-slider";
+
 import { RootState } from "@/store";
-import BackButton from "../Button/BackButton";
 import {
   changeBreakMinutes,
   changeWorkMinutes,
 } from "@/store/slices/pomodoro.slice";
+
+import BackButton from "../Button/BackButton";
+import style from "./style.module.css";
 export interface ISettingProps {}
 
 export default function Setting(props: ISettingProps) {

@@ -1,18 +1,20 @@
 import * as React from "react";
-import style from "./style.module.css";
+import { useDispatch, useSelector } from "react-redux";
+
 import Button from "@/components/Button";
+import { RootState } from "@/store";
+import { changeLocation, changeWeather } from "@/store/slices/case.slice";
 import {
   changeVolumeRain,
   changeVolumeTraffic,
-  openButtonRain,
   closeButtonRain,
-  openButtonTraffic,
   closeButtonTraffic,
+  openButtonRain,
+  openButtonTraffic,
 } from "@/store/slices/sound.slice";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/store";
-import { changeLocation, changeWeather } from "@/store/slices/case.slice";
 import { PLACE, WEATHER } from "@/utils/enums";
+
+import style from "./style.module.css";
 
 export interface IOutSideProps {}
 

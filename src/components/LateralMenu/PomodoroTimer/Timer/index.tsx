@@ -1,15 +1,16 @@
 import * as React from "react";
-import style from "./style.module.css";
 import {
-  CircularProgressbar,
-  CircularProgressbarWithChildren,
   buildStyles,
+  CircularProgressbarWithChildren,
 } from "react-circular-progressbar";
-import PlayButton from "../Button/PlayButton";
-import PauseButton from "../Button/PauseButton";
-import SettingButton from "../Button/SettingButton";
 import { useSelector } from "react-redux";
+
 import { RootState } from "@/store";
+
+import PauseButton from "../Button/PauseButton";
+import PlayButton from "../Button/PlayButton";
+import SettingButton from "../Button/SettingButton";
+import style from "./style.module.css";
 
 const red = "#f54e4e";
 const green = "#4aec8c";
@@ -29,24 +30,7 @@ export default function Timer(props: ITimerProps) {
   const secondsLeftRef = React.useRef(secondsLeft);
   const isPauseRef = React.useRef(isPaused);
   const modeRef = React.useRef(mode);
-
-  const switchMode = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
-    const nextMode = modeRef.current === "work" ? "break" : "work";
-    const nextSeconds = (nextMode === "work" ? workMinutes : breakMinutes) * 60;
-
-    setMode(nextMode);
-    modeRef.current = nextMode;
-
-    setSecondsLeft(nextSeconds);
-    secondsLeftRef.current = nextSeconds;
-  };
-
-  const initTimer = () => {
-    setSecondsLeft(workMinutes * 60);
-  };
+  const audioRef = React.useRef<HTMLAudioElement>(null);
 
   const tick = () => {
     secondsLeftRef.current--;
@@ -54,6 +38,25 @@ export default function Timer(props: ITimerProps) {
   };
 
   React.useEffect(() => {
+    const initTimer = () => {
+      setSecondsLeft(workMinutes * 60);
+    };
+
+    const switchMode = () => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+      const nextMode = modeRef.current === "work" ? "break" : "work";
+      const nextSeconds =
+        (nextMode === "work" ? workMinutes : breakMinutes) * 60;
+
+      setMode(nextMode);
+      modeRef.current = nextMode;
+
+      setSecondsLeft(nextSeconds);
+      secondsLeftRef.current = nextSeconds;
+    };
+
     initTimer();
     const interval = setInterval(() => {
       if (isPauseRef.current) {
@@ -66,14 +69,13 @@ export default function Timer(props: ITimerProps) {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [useSelector((state: RootState) => state.pomodoro)]);
+  }, [workMinutes, breakMinutes]);
 
   const totalSeconds = mode === "work" ? workMinutes * 60 : breakMinutes * 60;
   const percentage = Math.round((secondsLeft / totalSeconds) * 100);
   const minutes = Math.floor(secondsLeft / 60);
   const seconds = secondsLeft % 60;
 
-  const audioRef = React.useRef<HTMLAudioElement>(null);
   return (
     <div
       className={style.timer_container}

@@ -1,15 +1,16 @@
 import * as React from "react";
-import Button from "@/components/Button";
-import {
-  openButtonKeyboard,
-  closeButtonKeyboard,
-  changeVolumeKeyboard,
-  openButtonPlane,
-  closeButtonPlane,
-  changeVolumePlane,
-} from "@/store/slices/sound.slice";
 import { useDispatch, useSelector } from "react-redux";
+
+import Button from "@/components/Button";
 import { RootState } from "@/store";
+import {
+  changeVolumeKeyboard,
+  changeVolumePlane,
+  closeButtonKeyboard,
+  closeButtonPlane,
+  openButtonKeyboard,
+  openButtonPlane,
+} from "@/store/slices/sound.slice";
 
 export interface IControllerPlaneProps {}
 

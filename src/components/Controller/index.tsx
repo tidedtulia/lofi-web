@@ -1,27 +1,29 @@
-import { RootState } from "@/store";
 import * as React from "react";
 import { useSelector } from "react-redux";
-import style from "./style.module.css";
+
+import { RootState } from "@/store";
+import { PLACE, SCENE } from "@/utils/enums";
+
 import LateralMenu from "../LateralMenu";
-import { PLACE, SCENE, TIME } from "@/utils/enums";
-import { ControllLofiCafeInSide, ControllLofiCafeOutSide } from "./LofiCafe";
+import FullScreen from "../LateralMenu/FullScreen";
+import Sound from "../Sound";
+import { AmIDreamingSpace, AmIDreamingUnderWater } from "./AmIDreaming/inde";
+import ControllerBedRoom from "./BedRoom";
 import {
   ControllerBookCafeInSide,
   ControllerBookCafeOutSide,
 } from "./BookCafe";
-import { AmIDreamingSpace, AmIDreamingUnderWater } from "./AmIDreaming/inde";
-import ControllerBedRoom from "./BedRoom";
-import ControllerIntheWoodsInSide from "./InTheWoods/InSide";
+import ControllerCozyStudio from "./CozyStudio";
 import { ControllerInTheWoodsOutSide } from "./InTheWoods";
+import ControllerIntheWoodsInSide from "./InTheWoods/InSide";
 import {
   ControllerLakeHouseInSide,
   ControllerLakeHouseOutSide,
 } from "./LakeHouse";
+import { ControllLofiCafeInSide, ControllLofiCafeOutSide } from "./LofiCafe";
 import ControllerPlane from "./Plane";
-import ControllerCozyStudio from "./CozyStudio";
 import { ControllerSeoulInSide, ControllerSeoulOutSide } from "./Seoul";
-import Sound from "../Sound";
-import FullScreen from "../LateralMenu/FullScreen";
+import style from "./style.module.css";
 
 export interface IControllerProps {
   isMouseMoving: boolean;

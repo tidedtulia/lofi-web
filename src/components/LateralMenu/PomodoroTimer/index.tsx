@@ -1,10 +1,12 @@
 import * as React from "react";
-import style from "./style.module.css";
 import { useSelector } from "react-redux";
+
 import { RootState } from "@/store";
-import Setting from "./Setting";
-import Timer from "./Timer";
 import { Position } from "@/utils/interface";
+
+import Setting from "./Setting";
+import style from "./style.module.css";
+import Timer from "./Timer";
 export interface IPomodoroTimerPanelProps {}
 
 export default function PomodoroTimerPanel(props: IPomodoroTimerPanelProps) {

@@ -1,9 +1,11 @@
+import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import { RootState } from "@/store";
 import { changeNumMusic } from "@/store/slices/music.slice";
 import { changeVolumeAudio } from "@/store/slices/sound.slice";
 import { PLAY, PLAY_PAUSE, TYPE_1, TYPE_2, TYPE_3 } from "@/utils/files";
-import * as React from "react";
-import { useDispatch, useSelector } from "react-redux";
+
 import style from "./style.module.css";
 export interface IMusicProps {}
 

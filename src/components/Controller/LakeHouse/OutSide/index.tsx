@@ -1,21 +1,21 @@
 import * as React from "react";
-import Button from "@/components/Button";
-
-import {
-  changeVolumeRain,
-  changeVolumeKeyboard,
-  changeVolumeBird,
-  openButtonRain,
-  closeButtonRain,
-  openButtonKeyboard,
-  closeButtonKeyboard,
-  openButtonBird,
-  closeButtonBird,
-} from "@/store/slices/sound.slice";
 import { useDispatch, useSelector } from "react-redux";
+
+import Button from "@/components/Button";
 import { RootState } from "@/store";
-import { PLACE, WEATHER } from "@/utils/enums";
 import { changeLocation, changeWeather } from "@/store/slices/case.slice";
+import {
+  changeVolumeBird,
+  changeVolumeKeyboard,
+  changeVolumeRain,
+  closeButtonBird,
+  closeButtonKeyboard,
+  closeButtonRain,
+  openButtonBird,
+  openButtonKeyboard,
+  openButtonRain,
+} from "@/store/slices/sound.slice";
+import { PLACE, WEATHER } from "@/utils/enums";
 export interface IControllerLakeHouseOutSideProps {}
 
 export default function ControllerLakeHouseOutSide(

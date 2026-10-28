@@ -1,8 +1,10 @@
 import * as React from "react";
-import { RootState } from "@/store";
 import { useSelector } from "react-redux";
-import SoundItem from "./SoundItem";
+
+import { RootState } from "@/store";
 import { SOUND_FILE } from "@/utils/files";
+
+import SoundItem from "./SoundItem";
 
 export interface ISoundProps {}
 

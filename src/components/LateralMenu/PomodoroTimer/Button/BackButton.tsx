@@ -1,7 +1,9 @@
 import * as React from "react";
-import style from "./style.module.css";
 import { useDispatch } from "react-redux";
+
 import { changeSetting } from "@/store/slices/pomodoro.slice";
+
+import style from "./style.module.css";
 export interface IBackButtonProps {}
 
 function BackButton(props: IBackButtonProps) {

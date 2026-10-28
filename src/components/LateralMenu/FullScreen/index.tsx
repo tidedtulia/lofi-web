@@ -1,6 +1,8 @@
 import * as React from "react";
-import style from "./style.module.css";
+
 import { EXIT_FULL, FULL_ICON } from "@/utils/files";
+
+import style from "./style.module.css";
 
 export interface IFullScreenProps {}
 

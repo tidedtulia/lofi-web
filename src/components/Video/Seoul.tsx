@@ -1,10 +1,12 @@
-import { RootState } from "@/store";
 import * as React from "react";
 import { useSelector } from "react-redux";
-import style from "./style.module.css";
-import { concateString } from "@/utils/utils";
+
+import { RootState } from "@/store";
 import { PLACE, TIME, WEATHER } from "@/utils/enums";
 import { VIDEO_FILE } from "@/utils/files";
+import { concateString } from "@/utils/utils";
+
+import style from "./style.module.css";
 
 export interface ISeoulProps {}
 

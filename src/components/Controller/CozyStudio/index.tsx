@@ -1,4 +1,7 @@
+import { useDispatch, useSelector } from "react-redux";
+
 import Button from "@/components/Button";
+import { RootState } from "@/store";
 import { changeWeather } from "@/store/slices/case.slice";
 import {
   changeVolumeKeyboard,
@@ -11,8 +14,6 @@ import {
   openButtonRain,
   openButtonTraffic,
 } from "@/store/slices/sound.slice";
-import { RootState } from "@/store";
-import { useDispatch, useSelector } from "react-redux";
 import { WEATHER } from "@/utils/enums";
 
 export default function ControllerCozyStudio() {

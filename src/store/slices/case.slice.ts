@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Case } from "@/utils/interface";
+
 import { PLACE, SCENE, TIME, WEATHER } from "@/utils/enums";
+import { Case } from "@/utils/interface";
 
 const initialState: Case = {
   scene: SCENE.LOFI_CAFE,

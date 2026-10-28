@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { StoreProvider } from "@/store/StoreProvider";
-const inter = Inter({ subsets: ["latin"] });
-
 // import "primeflex/primeflex.css";
 import "primereact/resources/primereact.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
+
+import type { Metadata } from "next";
+
+import { StoreProvider } from "@/store/StoreProvider";
 import { logo_header, SCENE_FILE } from "@/utils/files";
-import Head from "next/head";
 // import "primeicons/primeicons.css";
 
 export const metadata: Metadata = {
@@ -34,7 +32,12 @@ export default function RootLayout({
   return (
     <StoreProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+        </head>
+        <body style={{ fontFamily: "Inter, sans-serif" }}>{children}</body>
       </html>
     </StoreProvider>
   );

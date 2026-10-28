@@ -1,5 +1,6 @@
-import { PomodoroSetting } from "@/utils/interface";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { PomodoroSetting } from "@/utils/interface";
 const initialState: PomodoroSetting = {
   workMinutes: 25,
   breakMinutes: 5,

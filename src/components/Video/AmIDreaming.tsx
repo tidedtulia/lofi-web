@@ -1,9 +1,11 @@
-import { RootState } from "@/store";
 import * as React from "react";
 import { useSelector } from "react-redux";
-import style from "./style.module.css";
+
+import { RootState } from "@/store";
 import { PLACE } from "@/utils/enums";
 import { VIDEO_FILE } from "@/utils/files";
+
+import style from "./style.module.css";
 
 export interface IAmIDreamingProps {}
 

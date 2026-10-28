@@ -1,10 +1,12 @@
 import * as React from "react";
-import style from "./style.module.css";
+
 import { Todo } from "@/utils/interface";
+
+import style from "./style.module.css";
 
 export interface ITodoItemProps {
   item: Todo;
-  deleteTodo: (id: number) => void;
+  deleteTodo: (_id: number) => void;
 }
 
 export default function TodoItem({ item, deleteTodo }: ITodoItemProps) {

@@ -1,13 +1,13 @@
 import * as React from "react";
-import Music from "./Music";
+
 import Clock from "./Clock";
-import Toggle from "./Toggle";
-import MixerPanel from "./MixerPanel";
-import ScenesPanel from "./ScenesPanel";
-import FullScreen from "./FullScreen";
 import GeneralSetting from "./GeneralSetting";
-import TodoList from "./TodoList";
+import MixerPanel from "./MixerPanel";
+import Music from "./Music";
 import PomodoroTimerPanel from "./PomodoroTimer";
+import ScenesPanel from "./ScenesPanel";
+import TodoList from "./TodoList";
+import Toggle from "./Toggle";
 
 export interface ILateralMenuProps {}
 

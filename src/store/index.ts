@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
+
 import caseReducer from "./slices/case.slice";
-import soundReducer from "./slices/sound.slice";
-import musicReducer from "./slices/music.slice";
 import hireReducer from "./slices/hide.slice";
+import musicReducer from "./slices/music.slice";
 import pomodoroReducer from "./slices/pomodoro.slice";
+import soundReducer from "./slices/sound.slice";
 export const store = configureStore({
   reducer: {
     case: caseReducer,

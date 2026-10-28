@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import style from "./style.module.css";
 export interface IPauseButtonProps {
   onClick: () => void;

@@ -1,7 +1,8 @@
-import { Music } from "@/utils/interface";
-import { NextRequest, NextResponse } from "next/server";
 import cloudinary from "cloudinary";
+import { NextRequest, NextResponse } from "next/server";
+
 import { MAX } from "@/utils/files";
+import { Music } from "@/utils/interface";
 
 cloudinary.v2.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,

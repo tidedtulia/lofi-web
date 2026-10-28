@@ -1,7 +1,9 @@
 import * as React from "react";
-import style from "./style.module.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import { RootState } from "@/store";
+import { changeWeather } from "@/store/slices/case.slice";
+import { changeNumMusic, changeType } from "@/store/slices/music.slice";
 import {
   changeVolumeAudio,
   changeVolumeBird,
@@ -15,10 +17,10 @@ import {
   changeVolumeTraffic,
   changeVolumeTrain,
 } from "@/store/slices/sound.slice";
-import { changeWeather } from "@/store/slices/case.slice";
-import { Position } from "@/utils/interface";
 import { WEATHER } from "@/utils/enums";
-import { changeNumMusic, changeType } from "@/store/slices/music.slice";
+import { Position } from "@/utils/interface";
+
+import style from "./style.module.css";
 export interface IMixerPanelProps {}
 
 export default function MixerPanel(props: IMixerPanelProps) {

@@ -1,9 +1,11 @@
 import * as React from "react";
-import style from "./style.module.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import { RootState } from "@/store";
-import { TIME } from "@/utils/enums";
 import { changeDay } from "@/store/slices/case.slice";
+import { TIME } from "@/utils/enums";
+
+import style from "./style.module.css";
 export interface IToggleProps {}
 
 function Toggle() {

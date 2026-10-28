@@ -1,16 +1,18 @@
 import * as React from "react";
 import { useSelector } from "react-redux";
+
 import { RootState } from "@/store";
-import LofiCafe from "./LofiCafe";
-import BookCafe from "./BookCafe";
-import BedRoom from "./BedRoom";
-import Plane from "./Plane";
-import LakeHouse from "./LakeHouse";
-import InTheWoods from "./InTheWoods";
-import Seoul from "./Seoul";
-import AmIDreaming from "./AmIDreaming";
-import CozyStudio from "./CozyStudio";
 import { SCENE } from "@/utils/enums";
+
+import AmIDreaming from "./AmIDreaming";
+import BedRoom from "./BedRoom";
+import BookCafe from "./BookCafe";
+import CozyStudio from "./CozyStudio";
+import InTheWoods from "./InTheWoods";
+import LakeHouse from "./LakeHouse";
+import LofiCafe from "./LofiCafe";
+import Plane from "./Plane";
+import Seoul from "./Seoul";
 
 export interface IVideoProps {}
 function Video(props: IVideoProps) {

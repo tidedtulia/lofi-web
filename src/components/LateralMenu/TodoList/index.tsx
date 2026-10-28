@@ -1,7 +1,9 @@
 import * as React from "react";
+
+import { Position, Todo } from "@/utils/interface";
+
 import style from "./style.module.css";
 import TodoItem from "./TodoItem";
-import { Position, Todo } from "@/utils/interface";
 
 export interface ITodoListProps {}
 

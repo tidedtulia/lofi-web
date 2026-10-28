@@ -1,9 +1,11 @@
 import * as React from "react";
 import { useSelector } from "react-redux";
+
 import { RootState } from "@/store";
-import style from "./style.module.css";
-import { VIDEO_FILE } from "@/utils/files";
 import { TIME } from "@/utils/enums";
+import { VIDEO_FILE } from "@/utils/files";
+
+import style from "./style.module.css";
 
 export interface IPlaneProps {}
 

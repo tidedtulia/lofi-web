@@ -1,13 +1,14 @@
+import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import Button from "@/components/Button";
+import { RootState } from "@/store";
 import { changeLocation } from "@/store/slices/case.slice";
 import {
   changeVolumeKeyboard,
   closeButtonKeyboard,
   openButtonKeyboard,
 } from "@/store/slices/sound.slice";
-import { RootState } from "@/store";
-import * as React from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { PLACE } from "@/utils/enums";
 
 export interface IUnderWaterProps {}
