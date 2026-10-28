@@ -52,4 +52,3 @@ jobs:
           registryPassword: ${{ secrets.GITHUB_TOKEN }}
           targetPort: 3000
           ingress: external
-          environmentVariables: CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
